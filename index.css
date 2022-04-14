@@ -1,0 +1,72 @@
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*=========
+Navigation
+===========*/
+
+nav {
+  background-color: teal;
+  padding: 0.4em;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
+
+nav > h3 {
+  margin: 0;
+}
+
+/*=========
+Blog posts
+===========*/
+
+#blog-list {
+  padding: 0.9em;
+}
+
+/*======
+Form
+========*/
+
+form {
+  padding: 4em 1em 1em;
+  display: grid;
+  background-color: lightblue;
+}
+
+input#post-title,
+textarea#post-body {
+  margin-bottom: 0.9em;
+  font-family: "Karla", sans-serif;
+  padding: 5px;
+}
+
+input#post-title {
+  font-weight: 700;
+}
+
+/*======= 
+Button 
+=========*/
+
+button {
+  padding: 1em;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: lightcyan;
+  border: none;
+  border-radius: 0.2em;
+  color: teal;
+  font-weight: 700;
+}
+
+button:hover,
+button:focus {
+  color: turquoise;
+}

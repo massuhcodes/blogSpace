@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BlogSpace</title>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav><h3>BlogSpace</h3></nav>
+    <!-- FORM -->
+    <form id="new-post">
+      <label for="post-title">Title:</label>
+      <input type="text" id="post-title" name="post-title" />
+      <label for="post-body">Post:</label>
+      <textarea name="post-body" id="post-body" cols="30" rows="5"></textarea>
+      <button>POST</button>
+    </form>
+    <!-- POSTS -->
+    <div id="blog-list"></div>
+    <!-- JS -->
+    <script src="/js/index.js"></script>
+  </body>
+</html>
