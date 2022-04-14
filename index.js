@@ -25,7 +25,7 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts", {
 })
   .then((response) => response.json())
   .then((posts) => {
-      // get only 10 posts from server
+    // get only 10 posts from server
     postsArray = posts.slice(0, 10);
     renderPosts();
   });
@@ -49,5 +49,6 @@ form.addEventListener("submit", function (event) {
     .then((post) => {
       postsArray.unshift(post); // adds to the front of array
       renderPosts();
+      form.reset();
     });
 });
