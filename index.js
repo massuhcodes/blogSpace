@@ -34,21 +34,23 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts", {
 form.addEventListener("submit", function (event) {
   // prevents from refreshing page when button is clicked
   event.preventDefault();
-  // create a new post
-  const newPost = {
-    title: titleInput.value,
-    body: bodyInput.value,
-  };
+  // create a new post but make sure values are given by user
+  if (titleInput.value || bodyInput.value) {
+    const newPost = {
+      title: titleInput.value,
+      body: bodyInput.value,
+    };
 
-  fetch("https://apis.scrimba.com/jsonplaceholder/posts", {
-    method: "POST",
-    body: JSON.stringify(newPost), // must convert object to json
-    headers: { "Content-Type": "application/json" },
-  })
-    .then((response) => response.json()) // convert back from json
-    .then((post) => {
-      postsArray.unshift(post); // adds to the front of array
-      renderPosts();
-      form.reset();
-    });
+    fetch("https://apis.scrimba.com/jsonplaceholder/posts", {
+      method: "POST",
+      body: JSON.stringify(newPost), // must convert object to json
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => response.json()) // convert back from json
+      .then((post) => {
+        postsArray.unshift(post); // adds to the front of array
+        renderPosts();
+        form.reset();
+      });
+  }
 });
